@@ -1,0 +1,4 @@
+C:\Users\MIchael\Documents\Projects\FIM\files\c|<built-in method read of _io.TextIOWrapper object at 0x0000026E1B507100>
+C:\Users\MIchael\Documents\Projects\FIM\files\a|aaa
+C:\Users\MIchael\Documents\Projects\FIM\files\b|bbbb
+C:\Users\MIchael\Documents\Projects\FIM\files\c|cccc
