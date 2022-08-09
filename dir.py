@@ -13,8 +13,7 @@ contents = ""
 with open(path, 'r') as f:
     cn = str(f.read())
     cntnt = str(cn)
-        hash = hashlib.sha512(cntnt.encode(utf_8)).hexdigest
-
+    hash = hashlib.sha512(cntnt.encode('utf8')).hexdigest()
 
 print(hash)
 

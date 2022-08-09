@@ -7,6 +7,7 @@ from pathlib import Path
 
 from django.forms import FilePathField
 from isort import file
+import hashlib
 
 
 
@@ -39,19 +40,19 @@ def baseline(file_paths):
     
     """ create a baseline in file named baseline.txt within the working directory
     baseline has two parts, first half contains the path to the file and second half
-    contains the contents of the file. the sections will be seprated by "|".
-    """
-   
-
+    contains the contents of the file. the sections will be seprated by "|"."""
 
     for file_path in file_paths:
-        
-        
+        h =hashlib.sha512()
+
+
         with open(file_path, 'r') as f:
             content = f.read()
+            h.update(content.encode('utf8'))
+            hash = h.hexdigest()
 
         with open("baseline.txt", 'a') as f:
-            f.write(str(file_path) + "|" + str(content)+"\n")
+            f.write(str(file_path) + "|" + str(hash)+"\n")
         
 
     
@@ -59,7 +60,7 @@ def baseline(file_paths):
 
 
         
-baseline()
+baseline(file_paths())
     
 
 
