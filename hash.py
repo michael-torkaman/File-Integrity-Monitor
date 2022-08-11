@@ -12,7 +12,7 @@ print(hash)
 
 
  
-
+if hash 
 
 # inputFile = ("baseline.txt")
 # openedFile = open(inputFile)
