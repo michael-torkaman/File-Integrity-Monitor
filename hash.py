@@ -1,18 +1,7 @@
-from base64 import encode
-import hashlib
-
-h =hashlib.sha512()
-
-with open ("baseline.txt", 'r') as f:
-    contents = f.read()
-    h.update(contents.encode('utf8'))
-    hash = h.hexdigest()
-
-print(hash)
-
-
- 
-if hash 
+with open("directories.txt", "r") as f:
+    lines = f.readlines()
+    lines = [line.rstrip() for line in lines]
+print(lines)
 
 # inputFile = ("baseline.txt")
 # openedFile = open(inputFile)
